@@ -20,27 +20,6 @@ The primary output is an interactive web application built with Streamlit, which
   - [Kaggle Dataset](https://www.kaggle.com/datasets/thedevastator/share-of-students-studying-abroad-by-country)
 - **Country Indicators:** [World Bank Development Indicators on Kaggle](https://www.kaggle.com/datasets/nicolasgonzalezmunoz/world-bank-world-development-indicators)
 
-## Setup and Usage
-
-1.  **Download the Data:**
-    - Download the **Student Mobility Data** from the sources listed above and place the CSV files into a directory named `MOBILITY_CSV`.
-    - Download the **World Development Indicators** data and place the CSV files into a directory named `WDI_CSV`.
-    - Ensure these two directories are in the root of the project folder.
-
-2.  **Install dependencies:**
-    It is recommended to use a virtual environment.
-    ```bash
-    pip install pandas numpy streamlit matplotlib seaborn scikit-learn plotly
-    ```
-
-3.  **Run the interactive dashboard:**
-    ```bash
-    streamlit run app.py
-    ```
-
-4.  **Explore the static analysis:**
-    The Python script `mobility_analysis_with_ml.py` contains the original, static analysis that formed the basis for the dashboard. It can be explored in an IDE like VS Code.
-
 ## Quick Note
 
 This project is one of my first major data science pieces. I am still learning and growing as a developer and data scientist. I am open to any and all feedback, suggestions, or corrections. Please feel free to raise an issue or connect with me if you have any thoughts! 
