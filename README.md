@@ -1,6 +1,6 @@
 # Global Student Mobility Analysis
 
-This project provides an in-depth analysis of global student mobility patterns using data from Kaggle and the World Bank. It includes a full data science workflow: data cleaning, exploratory data analysis (EDA), unsupervised machine learning (clustering) to identify country profiles, and supervised machine learning (regression) to predict mobility rates based on economic indicators.
+This project provides an in-depth analysis of global student mobility patterns using data from Kaggle and the World Bank. It includes a full data science workflow: data cleaning, exploratory data analysis (EDA), unsupervised machine learning (clustering) to identify country profiles, and supervised machine learning (classification) to predict mobility rates based on economic indicators.
 
 The primary output is an interactive web application built with Streamlit, which allows for dynamic exploration of the data and model results.
 
