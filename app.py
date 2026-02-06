@@ -139,6 +139,11 @@ st.title("Global Student Mobility: An Interactive Analysis")
 # --- Load Data ---
 with st.spinner('Loading and processing data...'):
     mobility_df = load_and_merge_data()
+    
+    if mobility_df.empty:
+        st.warning("Data loading failed. Please check the error messages above.")
+        st.stop()
+
     country_avg_mobility = mobility_df.groupby('country')[['inbound_rate', 'outbound_rate']].mean().dropna()
 
     wdi_df_processed = load_and_process_wdi_data(year='2019')
