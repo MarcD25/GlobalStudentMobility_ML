@@ -50,14 +50,14 @@ def load_and_merge_data():
     mobility_df = pd.merge(inbound_df[['country', 'Year', 'inbound_rate']], outbound_df[['country', 'Year', 'outbound_rate']], on=['country', 'Year'], how='outer')
     
     # Fix known country name mismatches for merging
-    mobility_df['country'].replace({
+    mobility_df['country'] = mobility_df['country'].replace({
         'Korea, Republic of': 'Korea, Rep.',
         'Hong Kong SAR': 'Hong Kong SAR, China',
         'Macao SAR': 'Macao SAR, China',
         'Russian Federation': 'Russian Federation',
         'Egypt': 'Egypt, Arab Rep.',
         'Slovakia': 'Slovak Republic'
-    }, inplace=True)
+    })
     
     return mobility_df
 
@@ -355,7 +355,7 @@ with tab3:
                     ]),
                     'Logistic Regression': Pipeline([
                         ('scaler', StandardScaler()),
-                        ('lr', LogisticRegression(multi_class='multinomial', max_iter=1000))
+                        ('lr', LogisticRegression(max_iter=1000))
                     ])
                 }
 
